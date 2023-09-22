@@ -6,27 +6,14 @@
         <InputSwitch :isChecked="toggleSwitch" @change:value="toggleButton" />
       </div>
 
-      <div>
-        <h2 class="mb-2 underline">Tabs</h2>
-        <Tabs :tabs="tabs" :activeTab="activeTab" @changeTab="updateActiveTab">
-          <template #headers>
-            <button v-for="(tab, index) in tabs" :key="index" @click="updateActiveTab(index)"
-              :class="`flex justify-center border-b-2 border-transparent hover:text-gray-600 hover:border-gray-600 py-4 ${activeTab === index ? ' border-b-2 border-b-indigo-600 text-black' : ''}`">
-              {{ tab.header }}
-            </button>
-          </template>
+      <Button type="button" round="lg" icon color="green" outline size="sm">
+        <Icon name="fa6-solid:trash-can" />
+      </Button>
 
-          <template #tab-content-1>
-            <p>Content for Header I</p>
-          </template>
-          <template #tab-content-2>
-            <p>Content for Header II</p>
-          </template>
-          <template #tab-content-3>
-            <p>Content for Header III</p>
-          </template>
-        </Tabs>
-      </div>
+      <ButtonTest icon outline color="red" size="sm">
+
+        <Icon name="fa6-solid:trash-can"/>
+      </ButtonTest>
 
       <div>
         <h2 class="mb-2 underline"> Message</h2>
